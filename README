@@ -1,0 +1,38 @@
+Not to be confused with the defunct "Siri0us," the dictation-only port.
+
+Please allow me to clarify exactly what this tweak does. If you can get your hands on authentication data from a 4S using Applidium's siriServer.rb script (at least until a 4S jailbreak), this tweak will inject it into Siri and let you use if until the data expires within 24 hours.
+
+Sirious assumes that you ALREADY have some sort of Siri GUI installed. I won't provide any links/names, but you can figure it out.
+
+I will NOT help any longer with getting the certificates, Ruby, required gems, etc working on your computer. That alone can take hours to do.
+
+
+
+
+Here's how to do it:
+
+1. Install Sirious.deb on your device with the Siri port.
+2. Using siriServer.rb and an iPhone 4S, get the X-Ace-Host, assistantId, speechId, and validationData.
+3. Open /var/mobile/Library/Preferences/com.n00neimp0rtant.sirious.plist.
+4. Paste in aceHost, assistantId, and speechId (but NOT validationData).
+5. Open convertValidationData.rb in a text editor and paste the sessionValidationData output that you got from the 4S, and save the file.
+6. Run convertValidationData.rb in Terminal. It will spit out a bunch of hexidecimals.
+7. Copy and paste them into the plist for validationData. If using Xcode or Property List Editor, you'll likely have to paste them between two angle brackets, < and >.
+8. Save the plist back onto your phone or iPod.
+
+
+Siri should work. If Siri still isn't authenticating, one of these things happened:
+- The data already expired
+- Something was pasted incorrectly
+- You jumped the gun and directly pasted the sessionValidationData from siriServer.rb into the plist without converting it
+- assistantd was running the whole time (just respring to resolve)
+
+
+In the future, after a 4S jailbreak, I'm considering a solution to "tether" devices to a 4S. The 4S would install a tweak that would live-sync its auth data to Dropbox, and the client devices would pull it down, eliminating the 24-hour expiry issue. But until we get a public 4S jailbreak (since apparently I'm not special enough to be part of the secret-secrets at the moment =P), we have to do it this way.
+
+
+
+
+
+
+n00neimp0rtant
