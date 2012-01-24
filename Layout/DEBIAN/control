@@ -1,7 +1,7 @@
 Package: com.n00neimp0rtant.sirious
 Name: Sirious
 Depends: mobilesubstrate
-Version: 0.0.1
+Version: 0.0.2
 Architecture: iphoneos-arm
 Description: courtesy of n00neimp0rtant
 Maintainer: n00neimp0rtant

@@ -1,3 +1,9 @@
+Sirious now works on the iPhone 4S. It works completely differently than it would on any other device: if installed, it will cache working authentication data to com.n00neimp0rtant.sirious.plist. Copy a preference file from a 4S with Sirious to another device with Sirious, and it will authenticate until the keys expire.
+
+
+
+
+
 Not to be confused with the defunct "Siri0us," the dictation-only port.
 
 Please allow me to clarify exactly what this tweak does. If you can get your hands on authentication data from a 4S using Applidium's siriServer.rb script (at least until a 4S jailbreak), this tweak will inject it into Siri and let you use if until the data expires within 24 hours.
@@ -26,9 +32,6 @@ Siri should work. If Siri still isn't authenticating, one of these things happen
 - Something was pasted incorrectly
 - You jumped the gun and directly pasted the sessionValidationData from siriServer.rb into the plist without converting it
 - assistantd was running the whole time (just respring to resolve)
-
-
-In the future, after a 4S jailbreak, I'm considering a solution to "tether" devices to a 4S. The 4S would install a tweak that would live-sync its auth data to Dropbox, and the client devices would pull it down, eliminating the 24-hour expiry issue. But until we get a public 4S jailbreak (since apparently I'm not special enough to be part of the secret-secrets at the moment =P), we have to do it this way.
 
 
 
