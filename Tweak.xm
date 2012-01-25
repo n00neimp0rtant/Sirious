@@ -102,7 +102,7 @@ static BOOL is4S;
 %end
 
 %ctor {
-	if([[UIDevice currentDevice] platformType] == UIDevice5iPhone)
+	if([[NSFileManager defaultManager] fileExistsAtPath:@"/System/Library/CoreServices/SpringBoard.app/N94AP.plist"])
 		is4S = YES;
 	else
 		is4S = NO;
