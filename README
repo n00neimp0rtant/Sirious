@@ -17,23 +17,16 @@ I will NOT help any longer with getting the certificates, Ruby, required gems, e
 
 Here's how to do it:
 
-1. Install Sirious.deb on your device with the Siri port.
-2. Using siriServer.rb and an iPhone 4S, get the X-Ace-Host, assistantId, speechId, and validationData.
-3. Open /var/mobile/Library/Preferences/com.n00neimp0rtant.sirious.plist.
-4. Paste in aceHost, assistantId, and speechId (but NOT validationData).
-5. Open convertValidationData.rb in a text editor and paste the sessionValidationData output that you got from the 4S, and save the file.
-6. Run convertValidationData.rb in Terminal. It will spit out a bunch of hexidecimals.
-7. Copy and paste them into the plist for validationData. If using Xcode or Property List Editor, you'll likely have to paste them between two angle brackets, < and >.
-8. Save the plist back onto your phone or iPod.
+1. Install Sirious.deb on both a 4S and a non-4S device.
+2. Activate Siri on the 4S.
+3. Copy com.n00neimp0rtant.sirious.plist from /var/mobile/Library/Preferences/ to the same directory on the non-4S.
+4. Activate Siri on the non-4S, and it should connect.
 
 
-Siri should work. If Siri still isn't authenticating, one of these things happened:
-- The data already expired
-- Something was pasted incorrectly
-- You jumped the gun and directly pasted the sessionValidationData from siriServer.rb into the plist without converting it
-- assistantd was running the whole time (just respring to resolve)
+I left the convertValidationData.rb file in case you still want to grab your auth data the old way.
 
 
+But seriously guys if you want siri that bad then just shell out for access to a working proxy like http://orbit.uhelios.com/ or something.
 
 
 
