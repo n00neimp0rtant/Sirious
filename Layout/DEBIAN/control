@@ -1,9 +1,9 @@
 Package: com.n00neimp0rtant.sirious
 Name: Sirious
 Depends: mobilesubstrate
-Version: 0.0.3
+Version: 0.0.4
 Architecture: iphoneos-arm
-Description: courtesy of n00neimp0rtant
+Description: all-in-one guzzoni key cacher and injector. Install on a 4S to actively cache keys to com.n00neimp0rtant.sirious.plist, and install on a non-4S to inject keys from that file into Siri. You still need to manually copy the file from a 4S to a non-4S.
 Maintainer: n00neimp0rtant
 Author: n00neimp0rtant
 Section: Tweaks
